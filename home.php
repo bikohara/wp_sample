@@ -1,11 +1,9 @@
 <?php get_header(); ?>
-<?php
-$args = array(
+<?php $args = array(
 	'post_type' => 'post',
 	'posts_per_page' => 8,
 	'paged' => $paged
-);
-?>
+); ?>
 <?php $the_query = new WP_Query($args); ?>
 <?php if(have_posts()) : ?>
 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>

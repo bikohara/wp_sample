@@ -5,8 +5,8 @@
 	<time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
 	<p><?php the_category(', '); ?></p>
 	<p><?php the_content('Read more'); ?></p>
-<?php endwhile; endif; ?>
-<?php previous_posts_link('新しい投稿ページへ'); ?>
-<?php next_posts_link('古い投稿ページへ'); ?>
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php endwhile; endif;
+previous_posts_link('新しい投稿ページへ');
+next_posts_link('古い投稿ページへ');
+get_sidebar();
+get_footer(); ?>

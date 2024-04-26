@@ -27,10 +27,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <?php if(is_front_page()): ?>
 <link rel="canonical" href="<?php echo esc_url(home_url('/')); ?>" />
 <?php endif; ?>
-<?php
-	global $post;
-	$slug = $post->post_name;
-?>
+<?php global $post;
+	$slug = $post->post_name; ?>
 <meta property="og:title" content="<?php bloginfo('name'); ?>">
 <?php if(is_home()): ?>
 <meta property="og:type" content="news">
@@ -79,7 +77,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </style>
 <?php wp_head(); ?>
 </head>
-
 <body>
 <header>
 	<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>

@@ -1,3 +1,3 @@
 <aside>
-サイドバー
+Side bar
 </aside>
