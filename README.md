@@ -1,21 +1,3 @@
-# name
-
-image or gif
-
-## Overview
-
-## Requirement
-
-## Usage
-
-## Features
-
-## Reference
-
-## Author
-
-[twitter](https://twitter.com/Kotabrog)
-
-## Licence
-
-[MIT](https://......)
+# 修正履歴
+2024/04/26：訂正
+2024/04/26：訂正
