@@ -5,7 +5,7 @@ if (!function_exists('output_breadcrumb')){
 			$wp_obj = get_queried_object();
 			$json_array = array();
 			echo '<div class="breadarea">'.
-			'<ul id="breadcrumb">'.
+			'<ul class="breadcrumb">'.
 			'<li>'.
 			'<a href="'. esc_url(home_url()) .'"><span>ホーム</span></a>'.
 			'</li>';

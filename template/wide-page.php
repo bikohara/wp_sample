@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template Name: Wide Page */
+get_header();
+?>
 <?php if(has_post_thumbnail()):?>
 <div id="page-header" style="background-image:url(<?php echo the_post_thumbnail_url(); ?>);">
 <?php else: ?>
@@ -12,13 +16,11 @@
 </div>
 <?php output_breadcrumb(); ?>
 <div id="wrapper">
-	<div id="content">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<div id="post-<?php the_ID(); ?>" class="page">
+	<div id="post-<?php the_ID(); ?>" class="page">
 <?php the_content(); ?>
-		</div>
+	</div>
 <?php endwhile;
 endif; ?>
-	</div>
 </div>
 <?php get_footer(); ?>

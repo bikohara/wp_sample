@@ -1,11 +1,15 @@
 <?php get_header(); ?>
-<section class="page_area">
-<div class="breadarea">
-<?php get_template_part('breadcrumb'); ?>
+<div id="page-header">
+	<div id="page-inner">
+		<div id="page-text">
+			<h2 class="title topfade"><?php _e('Page not found'); ?></h2>
+		</div>
+	</div>
 </div>
-	<div class="inner">
-		<h2 class="post_head"><span><?php _e('Page not found'); ?></span></h2>
+<?php output_breadcrumb(); ?>
+<div id="wrapper">
+	<div id="content">
 <?php _e("No posts found."); ?>
 	</div>
-</section>
+</div>
 <?php get_footer(); ?>
