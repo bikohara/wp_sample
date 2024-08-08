@@ -1,4 +1,6 @@
 <?php
+/* Loading CSS and Javascript
+/*--------------------------------*/
 function sample_scripts(){
 	wp_enqueue_style('style', get_stylesheet_uri());
 	wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js');
@@ -7,7 +9,16 @@ function sample_scripts(){
 }
 add_action('wp_enqueue_scripts', 'sample_scripts');
 
+/* Language files
+/*--------------------------------*/
+load_textdomain('sample', dirname(__FILE__).'/languages/' . get_locale() . '.mo');
+
+/* Loading a PHP file
+/*--------------------------------*/
 require("inc/breadcrumb.php");
+
+/* Basic configuration
+/*--------------------------------*/
 define('NO_HEADER_TEXT', true);
 define('HEADER_TEXTCOLOR', true);
 define('HEADER_IMAGE', '%s/img/mainImage.png');
@@ -16,6 +27,9 @@ define('HEADER_IMAGE_HEIGHT', 1056);
 add_theme_support('custom-header');
 add_theme_support('custom-logo');
 add_theme_support('post-thumbnails');
+
+/* Menu
+/*--------------------------------*/
 register_nav_menus(array(
 	'header' => __('Header Navigation', 'sample'),
 	'footer' => __('Footer Navigation', 'sample'),
@@ -27,7 +41,7 @@ add_theme_support('post-thumbnails');
 add_image_size('sizeA',450,300,true);
 add_image_size('sizeB',400,400,true);
 
-/* Widgets Sidebar
+/* Widgets
 /*--------------------------------*/
 function sample_widgets_init(){
 	register_sidebar(array(

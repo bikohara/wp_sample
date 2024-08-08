@@ -11,12 +11,9 @@
 	<div id="content">
 <?php $args = array(
 	'post_type' => 'post',
-	'posts_per_page' => 8,
-	'paged' => $paged
-); ?>
-<?php $the_query = new WP_Query($args); ?>
-<?php if(have_posts()) : ?>
-<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+	'posts_per_page' => 8 );
+$the_query = new WP_Query($args);
+if(have_posts()): while(have_posts()):the_post(); ?>
 			<dl>
 				<dt><?php the_time('Y/m/d');?><?php
 $category = get_the_category();
@@ -26,8 +23,8 @@ if ($category[0]) {
 ?></dt>
 				<dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
 			</dl>
-		<?php endwhile; ?>
-		<?php endif; ?>
+<?php endwhile;
+	endif; ?>
 		<?php the_posts_pagination(array('screen_reader_text'=>'')); ?>
 	</div>
 </div>
