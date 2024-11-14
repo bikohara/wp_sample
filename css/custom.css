@@ -69,14 +69,14 @@
 	box-sizing:border-box;}
 .breadarea{
 	padding:20px;
-	color:#FFF;
+	color:#fff;
 	box-sizing:border-box;
 	display:table;
 	width:100%;
 	background:#222;}
 .breadarea a{
 	text-decoration:none;
-	color:#FFF;}
+	color:#fff;}
 .breadarea .breadcrumb{
 	padding-left:0;
 	margin-top:0;
@@ -96,8 +96,8 @@
 	content:'';
 	width:8px;
 	height:8px;
-	border-top:1px solid #FFF;
-	border-right:1px solid #FFF;
+	border-top:1px solid #fff;
+	border-right:1px solid #fff;
 	-webkit-transform:rotate(45deg);
 	-ms-transform:rotate(45deg);
 	transform:rotate(45deg);
@@ -113,7 +113,7 @@
 .breadarea li:last-child::before{
 	content:normal;}
 .breadarea li span{
-	color:#FFF;}
+	color:#fff;}
 
 /* Page header
 --------------------*/
@@ -125,7 +125,7 @@
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
-	background-color:#CED1D3;}
+	background-color:#ccc;}
 #page-inner{
 	height:200px;
 	max-width:1200px;
@@ -166,23 +166,30 @@
 	border-radius:6px;
 	width:100%;
 	margin-bottom:3em;
-	background-color:#FFF;
+	background-color:#fff;
 	box-sizing:border-box;}
 #side-contents .main-data h3{
 	font-size:18px;
 	font-weight:500;
 	margin:0 0 20px 0;
-	background:#F2A0B9;
+	background:#222;
 	padding:10px;
 	color:#666;
-	border-radius:6px;
-	color:#FFF;}
+	color:#fff;}
 #side-contents .main-data h3::after{
 	display:none;}
+#side-contents .main-data #comments{
+	background:transparent;
+	border-bottom:1px solid #222;
+	color:#222;}
+#side-contents .main-data #reply-title{
+	border:1px solid #222;
+	background:#fff;
+	color:#222;}
 #side-contents .side-data{
 	width:100%;
-	border:1px solid #CED1D3;
-	background-color:#FFF;
+	border:1px solid #ccc;
+	background-color:#fff;
 	padding:20px;
 	box-sizing:border-box;}
 #side-contents .widget_block{margin:0 0 30px;}
@@ -203,24 +210,20 @@
 	line-height:50px;}
 .side-data ul li{
 	margin:0;
-	padding:0;
+	padding:0 0 10px;
 	background:none;
 	position:relative;
-	margin:0 0 10px;}
+	margin:0 0 10px;
+	border-bottom:1px dashed #ccc;}
 .side-data ul li a{
 	display:block;
-	padding:0 5px 0 20px;
-	height:50px;
-	line-height:50px;
-	color:#FFF;
+	padding:0;
 	overflow:hidden;
-	border:1px solid #222;
 	text-decoration:none;
-	background:#222;
 	position:relative;
 	box-sizing:border-box;}
 .side-data ul li a:hover{
-	background:#FFF;
+	background:#fff;
 	color:#222;}
 @media only screen and (min-width:768px){
 	#side-contents .main-data{
@@ -238,6 +241,74 @@
 		width:calc(30% - 20px);
 		margin-left:20px;}
 }
+
+/* Comment
+--------------------*/
+.btn-contact input[type="submit"]{
+	background:#222;
+	font-size:16px;
+	margin:30px auto 0;
+	display:block;
+	box-shadow:0 0 0 4px #222;
+	border:1px dashed #fff;
+	text-align:center;
+	padding:10px 2rem;
+	color:#fff;
+	transition:all 0.4s ease;
+	border-radius:4px;}
+.btn-contact input[type="submit"]:hover{
+	background:#666;
+	box-shadow:0 0 0 4px #666;}
+#respond{
+	margin-top:30px;
+	padding-top:10px;
+	border-top:1px dashed #ccc;}
+.comment-form-comment label{
+	display:block;}
+#comment{
+	padding:8px;
+	width:100%;
+	background:#fff;
+	border:1px solid #ccc;}
+#commentform input[type="text"]{
+	padding:8px;
+	width:100%;
+	background:#fff;
+	border:1px solid #ccc;
+	border-radius:6px;}
+#comments{
+    margin:50px 0 20px!important;}
+.commentlist{counter-reset:titleNum;}
+.commentlist li{
+	position:relative;
+	padding:6px 0 6px 2.5em;
+	list-style:none;}
+.commentlist li::before{
+	position:absolute;
+	top:6px;
+	left:0;
+	counter-increment:titleNum;
+	content:counter(titleNum);
+	width:32px;
+	height:32px;
+	line-height:32px;
+	background-color:#222;
+	color:#fff;
+	text-align:center;}
+.form-submit #submit{
+	border:none;
+	color:#fff;
+	padding:10px;
+	appearance:none;
+	display:block;
+	background-color:#222;
+	transition:all .2s ease;}
+.form-submit #submit:hover{
+	background-color:#666;}
+h3.under-line{
+	border-bottom:2px solid #000;
+	font-size:25px;
+	margin:0 auto 45px;}
 
 /* News
 --------------------*/
@@ -264,7 +335,7 @@
 		display:inline-block;
 		width:7em;
 		background:#999;
-		color:#FFF;
+		color:#fff;
 		font-size:0.8em;
 		text-align:center;
 		margin-right:1em;
