@@ -10,9 +10,9 @@
 		</div>
 	</div>
 </div>
+<div id="content">
 <?php output_breadcrumb(); ?>
-<div id="wrapper">
-	<div id="content">
+	<div class="inner">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" class="page">
 <?php the_content(); ?>
