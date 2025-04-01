@@ -14,9 +14,9 @@ get_header();
 		</div>
 	</div>
 </div>
+<div id="content">
 <?php output_breadcrumb(); ?>
-<div id="wrapper">
-	<div id="content">
+	<div class="inner">
 		<div id="side-contents">
 			<div class="main-data">
 <?php if(has_post_thumbnail()): ?>
