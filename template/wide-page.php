@@ -14,8 +14,8 @@ get_header();
 		</div>
 	</div>
 </div>
-<?php output_breadcrumb(); ?>
 <div id="wrapper">
+<?php output_breadcrumb(); ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<div id="post-<?php the_ID(); ?>" class="page">
 <?php the_content(); ?>
