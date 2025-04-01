@@ -7,8 +7,8 @@
 	</div>
 </div>
 <?php output_breadcrumb(); ?>
-<div id="wrapper">
-	<div id="content">
+<div id="content">
+	<div class="inner">
 		<div id="side-contents">
 			<div id="post-<?php the_ID(); ?>" class="main-data">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
