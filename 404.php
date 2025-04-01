@@ -7,8 +7,8 @@
 	</div>
 </div>
 <?php output_breadcrumb(); ?>
-<div id="wrapper">
-	<div id="content">
+<div id="content">
+	<div class="inner">
 <?php _e("No posts found."); ?>
 	</div>
 </div>
