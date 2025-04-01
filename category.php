@@ -7,8 +7,8 @@
 	</div>
 </div>
 <?php output_breadcrumb(); ?>
-<div id="wrapper">
-	<div id="content">
+<div id="content">
+	<div class="inner">
 <?php $args = array(
 	'post_type' => 'post',
 	'posts_per_page' => 8 );
