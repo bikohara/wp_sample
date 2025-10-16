@@ -14,6 +14,7 @@
 ?></title>
 <meta name="description" content="<?php echo trim(wp_title('', false)); if(wp_title('', false)){ echo ' - '; } bloginfo('description'); ?>">
 <meta name="keywords" content="キーワード1,キーワード2,キーワード3,キーワード4,キーワード5,キーワード6,キーワード7" />
+<?php get_template_part('inc/adminber'); ?>
 <?php wp_head(); ?>
 </head>
 <body>
